@@ -1,0 +1,21 @@
+<!-- Reproduced from the laboratory report. Validate against actual alert JSON. -->
+<group name="local,syscheck,mitre_lab,">
+  <rule id="100010" level="10">
+    <if_sid>554,550</if_sid>
+    <field name="file" type="pcre2">(?i)\\Users\\Public\\</field>
+    <description>T1564.001: file created/modified under Public - $(file)</description>
+    <mitre><id>T1564.001</id></mitre>
+  </rule>
+  <rule id="100020" level="12">
+    <if_group>syscheck</if_group>
+    <field name="file" type="pcre2">(?i)CurrentVersion\\Run</field>
+    <description>T1547.001: Run registry key changed - $(file)</description>
+    <mitre><id>T1547.001</id></mitre>
+  </rule>
+  <rule id="100030" level="12">
+    <if_group>syscheck</if_group>
+    <field name="file" type="pcre2">(?i)\\Startup\\</field>
+    <description>T1547.001: Startup folder changed - $(file)</description>
+    <mitre><id>T1547.001</id></mitre>
+  </rule>
+</group>

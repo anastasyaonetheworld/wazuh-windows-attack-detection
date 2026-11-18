@@ -1,0 +1,28 @@
+# Credentials, private keys and state
+*.pem
+*.key
+*.p12
+*.pfx
+*password*
+*credential*
+*secret*
+*.env
+.env.*
+!/README.md
+
+# Logs, machine exports and lab data
+*.log
+*.pcap
+*.pcapng
+alerts.json
+archives.json
+*.bak
+*.zip
+*.7z
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/

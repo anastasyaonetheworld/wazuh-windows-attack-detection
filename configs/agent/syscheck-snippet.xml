@@ -1,0 +1,9 @@
+<!-- Add ONLY these children to the existing <syscheck> section in ossec.conf.
+     Adjust the Startup path for the current Windows profile. -->
+<syscheck>
+  <frequency>60</frequency>
+  <directories check_all="yes" realtime="yes" report_changes="yes">C:\Users\Public</directories>
+  <windows_registry arch="both" report_changes="yes">HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run</windows_registry>
+  <windows_registry arch="both" report_changes="yes">HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce</windows_registry>
+  <directories check_all="yes" realtime="yes" report_changes="yes">C:\Users\LAB_USER\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</directories>
+</syscheck>
